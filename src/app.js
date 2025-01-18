@@ -44,7 +44,7 @@ const doTask = async (cloudClient) => {
   result.push(
     `${res1.isSign ? "已经签到过了，" : ""}签到获得${res1.netdiskBonus}M空间`
   );
-  await delay(5000); // 延迟5秒
+  await delay(5000); // 延迟5秒1111
 
   const res2 = await cloudClient.taskSign();
   buildTaskResult(res2, result);
@@ -62,7 +62,7 @@ const doFamilyTask = async (cloudClient) => {
   if (familyInfoResp) {
     for (let index = 0; index < familyInfoResp.length; index += 1) {
       const { familyId } = familyInfoResp[index];
-      console.log(familyId);
+          console.log(familyId);  // 打印家庭ID
       const res = await cloudClient.familyUserSign(familyId);
       result.push(
         "家庭任务" +
